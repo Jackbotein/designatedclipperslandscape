@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="https://jackbotein.github.io/designatedclipperslandscape/assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="https://jackbotein.github.io/designatedclipperslandscape/assets/css/noscript.css" /></noscript>
 	</head>
-	<body class="is-preload">
+	<body class="is-preload" onload="contactform()">
 
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
@@ -78,25 +78,8 @@
 						<div class="inner">
 							<h2 class="major">Contact Us</h2>
 							<p>At Designated Clippers Landscape Services, our inbox is always open.</p>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="email" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="4"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
+							      <div id="feedbackform" style="background-color: transparent;"></div>
+
 							<ul class="contact">
 								<li class="icon solid fa-home">
 									Untitled Inc<br />
@@ -121,6 +104,25 @@
 			<script src="https://jackbotein.github.io/designatedclipperslandscape/assets/js/breakpoints.min.js"></script>
 			<script src="https://jackbotein.github.io/designatedclipperslandscape/assets/js/util.js"></script>
 			<script src="https://jackbotein.github.io/designatedclipperslandscape/assets/js/main.js"></script>
+<script>
+  function contactform() {
+  document.getElementById('feedbackform').innerHTML = "<iframe id='gform' src='https://jackbotein.github.io/midsouthdevelopers/contactform.html' style='border:0px #ffffff none;' name='myiFrame' autocomplete='off' scrolling='no' frameborder='1' marginheight='0px' marginwidth='0px' height='500px' width='100%' allowfullscreen></iframe>";
+loadtracker();
+}
+    </script>
+  <script type="text/javascript">
+var load = 0;
+
+function loadtracker() {
+document.getElementById('gform').onload = function() {
+    /*Execute on every reload on iFrame*/
+    load++;
+    if(load > 1){
+        /*Second reload is a submit*/
+        window.location.href = "https://jackbotein.github.io/midsouthdevelopers/";
+    }
+}
+}
 
 	</body>
 </html>
